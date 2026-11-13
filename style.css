@@ -1,0 +1,107 @@
+/* INIAD introduction page */
+:root {
+  color-scheme: light;
+  --navy: #123b5d;
+  --blue: #176b9a;
+  --pale-blue: #eaf4f8;
+  --ink: #263746;
+  --muted: #5b6d79;
+  --paper: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1.25rem;
+  color: var(--ink);
+  background: linear-gradient(135deg, #edf5f8, #f8fafb 55%, #e8f1f5);
+  font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+body > h1,
+body > h2,
+body > p,
+body > ul {
+  width: min(100%, 760px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding: 2rem 2.25rem;
+  border-radius: 1rem;
+  color: #fff;
+  background: linear-gradient(120deg, var(--navy), var(--blue));
+  box-shadow: 0 12px 28px rgb(18 59 93 / 16%);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  letter-spacing: 0.06em;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 0.9rem;
+  border-left: 5px solid var(--blue);
+  color: var(--navy);
+  font-size: 1.35rem;
+}
+
+p,
+ul {
+  padding: 1.5rem 1.75rem;
+  border: 1px solid #dce8ed;
+  border-radius: 0.85rem;
+  background: var(--paper);
+  box-shadow: 0 5px 18px rgb(26 64 87 / 5%);
+}
+
+p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.7rem;
+  margin-top: 0;
+  padding: 1.25rem;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding: 0.7rem 0.85rem 0.7rem 2rem;
+  border-radius: 0.55rem;
+  background: var(--pale-blue);
+  color: var(--navy);
+  font-weight: 600;
+}
+
+li::before {
+  position: absolute;
+  left: 0.8rem;
+  color: var(--blue);
+  content: "✦";
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    padding: 1.5rem;
+  }
+
+  p {
+    padding: 1.2rem;
+  }
+}

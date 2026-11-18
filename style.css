@@ -1,12 +1,12 @@
-/* INIAD introduction page */
+/* INIAD introduction page — pink edition */
 :root {
   color-scheme: light;
-  --navy: #123b5d;
-  --blue: #176b9a;
-  --pale-blue: #eaf4f8;
-  --ink: #263746;
-  --muted: #5b6d79;
-  --paper: #ffffff;
+  --navy: #7a275d;
+  --blue: #c74c8b;
+  --pale-pink: #fdeaf3;
+  --ink: #502a43;
+  --muted: #7a536a;
+  --paper: #fffafd;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 3rem 1.25rem;
   color: var(--ink);
-  background: linear-gradient(135deg, #edf5f8, #f8fafb 55%, #e8f1f5);
+  background: linear-gradient(135deg, #fff1f7, #fffafd 55%, #f9e2ed);
   font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 1rem;
   line-height: 1.9;
@@ -38,8 +38,8 @@ h1 {
   padding: 2rem 2.25rem;
   border-radius: 1rem;
   color: #fff;
-  background: linear-gradient(120deg, var(--navy), var(--blue));
-  box-shadow: 0 12px 28px rgb(18 59 93 / 16%);
+  background: linear-gradient(120deg, #8f315f, #db78a8);
+  box-shadow: 0 12px 28px rgb(143 49 95 / 16%);
   font-size: clamp(1.8rem, 5vw, 2.5rem);
   letter-spacing: 0.06em;
 }
@@ -56,10 +56,10 @@ h2 {
 body > p,
 ul {
   padding: 1.5rem 1.75rem;
-  border: 1px solid #dce8ed;
+  border: 1px solid #efc9da;
   border-radius: 0.85rem;
   background: var(--paper);
-  box-shadow: 0 5px 18px rgb(26 64 87 / 5%);
+  box-shadow: 0 5px 18px rgb(122 39 93 / 6%);
 }
 
 body > p {
@@ -81,9 +81,9 @@ li {
   position: relative;
   width: 100%;
   padding: 1.1rem 1.25rem 1.1rem 2.4rem;
-  border: 1px solid #d1e3eb;
+  border: 1px solid #edbfd3;
   border-radius: 0.55rem;
-  background: var(--pale-blue);
+  background: var(--pale-pink);
   color: var(--navy);
 }
 

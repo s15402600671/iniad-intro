@@ -1,12 +1,6 @@
-/* INIAD introduction page */
+/* 意図的に最高にダサいCSS */
 :root {
   color-scheme: light;
-  --navy: #123b5d;
-  --blue: #176b9a;
-  --pale-blue: #eaf4f8;
-  --ink: #263746;
-  --muted: #5b6d79;
-  --paper: #ffffff;
 }
 
 * {
@@ -15,120 +9,138 @@
 
 body {
   margin: 0;
-  padding: 3rem 1.25rem;
-  color: var(--ink);
-  background: linear-gradient(135deg, #edf5f8, #f8fafb 55%, #e8f1f5);
-  font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
-  font-size: 1rem;
-  line-height: 1.9;
+  padding: 24px;
+  background:
+    repeating-conic-gradient(#ff0 0 10deg, #f0f 10deg 20deg, #0ff 20deg 30deg);
+  color: #000;
+  font-family: "Comic Sans MS", "Papyrus", "Arial Black", sans-serif;
+  cursor: crosshair;
 }
 
 body > h1,
 body > h2,
 body > p,
 body > ul {
-  width: min(100%, 760px);
-  margin-right: auto;
-  margin-left: auto;
+  width: 94%;
+  margin: 18px auto;
 }
 
 h1 {
   margin-top: 0;
-  margin-bottom: 2rem;
-  padding: 2rem 2.25rem;
-  border-radius: 1rem;
+  border: 12px ridge #ff00ff;
+  outline: 8px dotted #00ff00;
+  padding: 28px;
+  background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta);
   color: #fff;
-  background: linear-gradient(120deg, var(--navy), var(--blue));
-  box-shadow: 0 12px 28px rgb(18 59 93 / 16%);
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  letter-spacing: 0.06em;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 56px;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 5px 5px 0 #000, -4px -2px 0 red;
+  transform: rotate(-2deg);
+  animation: very-ugly 0.35s infinite alternate;
 }
 
 h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-  padding-left: 0.9rem;
-  border-left: 5px solid var(--blue);
-  color: var(--navy);
-  font-size: 1.35rem;
+  display: inline-block;
+  border: 6px dashed #000;
+  padding: 8px 20px;
+  background: #00ff00;
+  color: #0000ff;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 32px;
+  text-decoration: underline wavy red;
+  text-transform: uppercase;
+  box-shadow: 14px 14px 0 #ff6600;
+  transform: rotate(3deg);
 }
 
 body > p,
 ul {
-  padding: 1.5rem 1.75rem;
-  border: 1px solid #dce8ed;
-  border-radius: 0.85rem;
-  background: var(--paper);
-  box-shadow: 0 5px 18px rgb(26 64 87 / 5%);
+  border: 10px double #000;
+  padding: 22px;
+  background: #ffff99;
+  box-shadow: 18px 18px 0 #00ffff, -12px -12px 0 #ff00ff;
 }
 
 body > p {
-  margin-top: 0;
-  color: var(--muted);
+  font-size: 21px;
+  line-height: 1.7;
+  letter-spacing: 4px;
+  text-align: justify;
+  transform: skew(-1deg);
 }
 
 ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 1.25rem;
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  list-style: square;
+  background: repeating-linear-gradient(45deg, #ffb3e6 0 20px, #b3ffff 20px 40px);
 }
 
 li {
-  position: relative;
-  width: 100%;
-  padding: 1.1rem 1.25rem 1.1rem 2.4rem;
-  border: 1px solid #d1e3eb;
-  border-radius: 0.55rem;
-  background: var(--pale-blue);
-  color: var(--navy);
+  border: 7px outset #ff0000;
+  padding: 14px;
+  background: #00ff00;
+  color: #ff0000;
+  font-weight: 900;
+  transform: rotate(1deg);
 }
 
-li::before {
-  position: absolute;
-  top: 1.05rem;
-  left: 0.9rem;
-  color: var(--blue);
-  content: "✦";
+li:nth-child(odd) {
+  background: #ff00ff;
+  color: #ffff00;
+  transform: rotate(-2deg);
 }
 
 li strong {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 1.05rem;
+  display: inline;
+  border: 3px dotted #000;
+  background: #fff;
+  color: #000;
+  font-family: Impact, sans-serif;
+  font-size: 24px;
 }
 
 li p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-  color: var(--muted);
-  font-weight: 400;
+  margin: 12px 0 0;
+  border: 4px ridge #00ffff;
+  padding: 12px;
+  background: #ffcc00;
+  color: #000;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
 }
 
-@media (max-width: 520px) {
+h1::before {
+  content: "★ "
+}
+
+h1::after {
+  content: " ★"
+}
+
+@keyframes very-ugly {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
+
+@media (max-width: 700px) {
   body {
-    padding: 1.5rem 1rem;
+    padding: 8px;
   }
 
   h1 {
-    padding: 1.5rem;
-  }
-
-  body > p {
-    padding: 1.2rem;
+    font-size: 38px;
   }
 
   ul {
-    padding: 1rem;
+    grid-template-columns: 1fr;
   }
 
-  li {
-    padding-right: 1rem;
+  body > p,
+  ul {
+    width: 100%;
   }
 }
